@@ -178,7 +178,7 @@ section#details {
   justify-content: space-between;
 }
 
-#popular h2 {
+.section-title {
   margin: 100px 0;
 }
 
@@ -226,4 +226,58 @@ article.card {
 .card-author strong {
   font-weight: 400;
   color: var(--color-logo);
+}
+
+section#best-artists {
+  height: 100%;
+  text-align: center;
+}
+
+#artist-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 70px;
+  margin-bottom: 70px;
+}
+
+.artist {
+  cursor: pointer;
+  height: 150px;
+  width: 350px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--text-color);
+  background: var(--card-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px;
+}
+
+.artist strong {
+  color: var(--color-logo);
+  font-weight: 500;
+}
+
+.active {
+  background: var(--color-logo);
+}
+
+.active strong {
+  color: var(--text-color);
+}
+
+#see-more-artists {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+#see-more-artists img {
+  margin-left: 35px;
 }
