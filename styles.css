@@ -114,3 +114,56 @@ section#gallery div {
 section#gallery img {
   border: 1px solid var(--text-color);
 }
+
+section#details {
+  height: 660px;
+  display: grid;
+  grid-template-areas: 
+    "number text text"
+    "number image image";
+}
+
+#details-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  grid-area: number;
+  padding-right: 70px;
+
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--subtitle-color);
+  text-align: center;
+}
+
+#details-number strong {
+  font-size: 50px;
+  color: var(--text-color);
+}
+
+#details-text {
+  display: flex;
+  grid-area: text;
+  padding: 60px;
+  font-size: 16px;
+}
+
+#details-text p {
+  margin-bottom: 70px;
+}
+
+#details-text p a {
+  color: var(--color-logo);
+}
+
+#details-text a {
+  color: var(--text-color);
+}
+
+#details-image {
+  height: 100px;
+  grid-area: image;
+  background: url(/public/assets/banner.png) no-repeat center;
+  background-size: cover;
+}
