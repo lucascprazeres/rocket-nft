@@ -17,20 +17,16 @@
 }
 
 body {
-  background: var(--body-background);
-  color: var(--text-color);
-  width: 100vw;
   height: 100vh;
+  background: url(/public/assets/background.png) no-repeat center;
+  background-color: var(--body-background);
+  background-size: cover;
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
 main#content {
-  width: 100vw;
-  height: 100vh;
-  background: url(/public/assets/background.png) no-repeat center;
-  background-size: cover;
-  padding: 40px 80px;
-  margin-bottom: 80px;
+  padding: 40px 80px 70px;
 }
 
 header {
@@ -52,7 +48,7 @@ nav ul li {
   cursor: pointer;
 }
 
-button {
+header button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,4 +276,142 @@ section#best-artists {
 
 #see-more-artists img {
   margin-left: 35px;
+}
+
+footer {
+  background: var(--card-color);
+  height: 70vh;
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "email links"
+    "social social";
+}
+
+.footer-top {
+  grid-area: top;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--subtitle-color);
+  border-top-width: 0px;
+  padding: 0 80px
+}
+
+.footer-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--color-logo);
+  transition: background 0.3s;
+}
+
+.footer-top a:hover {
+  background: var(--text-color);
+  transition: background 0.3s;
+}
+
+.footer-mail {
+  grid-area: email;
+  border: 1px solid var(--subtitle-color);
+  border-width: 0px 1px 0px 1px;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-mail label {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.footer-mail label strong {
+  color: var(--color-logo);
+  font-weight: 500;
+}
+
+.mail-input-group {
+  height: 68px;
+  width: auto;
+}
+
+.mail-input-group input {
+  border: none;
+  height: 100%;
+  width: 280px;
+  background: var(--color-input);
+  color: var(--subtitle-color);
+  font-size: 20px;
+  text-align: center;
+}
+
+.mail-input-group button {
+  cursor: pointer;
+  border: none;
+  background: var(--text-color);
+  color: var(--black-text);
+  font-size: 20px;
+  font-weight: bold;
+  height: 100%;
+  width: 120px;
+}
+
+.footer-menu {
+  grid-area: links;
+  border: 1px solid var(--subtitle-color);
+  border-width: 0px 1px 0px 0px;
+  padding: 0 200px 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-menu ul {
+  display: block;
+}
+
+.footer-menu ul li {
+  margin-bottom: 30px;
+}
+
+.footer-menu ul li a {
+  text-decoration: none;
+  color: var(--subtitle-color);
+  font-size: 20px;
+}
+
+.footer-menu ul li .link-highlight {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.footer-social {
+  grid-area: social;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--subtitle-color);
+  padding: 0 80px
+}
+
+.footer-social span {
+  font-size: 20px;
+  color: var(--subtitle-color);
+  font-style: normal;
+}
+
+.footer-social ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer-social ul li {
+  margin: 0 25px;
 }
